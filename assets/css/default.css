@@ -1,0 +1,47 @@
+/*
+Product: Corda Developers
+Author: Corda Developers
+Author URL: https://corda.net/
+*/
+
+/*------------------------------------------------*/
+/* GLOBAL YR
+/*------------------------------------------------*/
+html, body { background: #FFF url("../img/background.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; font: 500 18px/26px "Poppins", Arial, sans-serif; color: #53585F; }
+h1 { font-size: 4rem; }
+h1:after { content: ""; display: block; background-color: #EC1D24; width: 240px; height: 8px; border-radius: 4px; margin: 24px auto 0 auto; }
+p { margin-top: 2em; }
+
+/*------------------------------------------------*/
+/* HEADER
+/*------------------------------------------------*/
+header { padding-top: 48px; }
+
+/*------------------------------------------------*/
+/* CONTENT
+/*------------------------------------------------*/
+.content { margin-top: 168px; }
+
+/*------------------------------------------------*/
+/* BUTTONS
+/*------------------------------------------------*/
+.btn { font-weight: 600; border-radius: 40px; padding: .8rem 2rem; }
+.btn-primary { background-color: #1D2343; border-color: #1D2343; }
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover { background-color: #FFF; border-color: #1D2343; color: #1D2343; }
+
+/*------------------------------------------------*/
+/* FOOTER
+/*------------------------------------------------*/
+footer { padding-bottom: 48px; }
+footer a { margin-right: 32px; }
+footer a:last-child {margin-right: 0;}
+
+/*------------------------------------------------*/
+/* MEDIA QUERIES
+/*------------------------------------------------*/
+@media (max-width: 980px)  {
+    h1, .h1 { font-size: 3rem; }
+    .content { margin-top: 104px; }
+}
