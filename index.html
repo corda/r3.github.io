@@ -1,83 +1,170 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
-    <title>Corda Developers @ Github</title>
+    <title>R3 Developers @ Github</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Select your favorite programming language and use the code samples we have available for to simplify your developer experience.">
-    <meta name="keywords" content="Corda,CorDapps,Developers">
+    <meta name="description" content="Explore our GitHub open source releases to kick start your CorDapp development">
+    <meta name="keywords" content="R3, Corda, CorDapps, Conclave, Developers">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/img/icons/site.webmanifest">
-    <link rel="mask-icon" href="assets/img/icons/safari-pinned-tab.svg" color="#EC1D24">
-    <meta name="msapplication-TileColor" content="#EC1D24">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="assets/img/icons/safari-pinned-tab.svg" color="#010101">
+    <meta name="msapplication-TileColor" content="#010101">
+    <meta name="theme-color" content="#010101">
     <meta property="og:image" content="assets/img/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
-    <meta property="og:title" content="Open Source Releases from Corda Developers">
-    <meta property="og:description" content="Select your favorite programming language and use the code samples we have available for to simplify your developer experience.">
-    <meta property="og:url" content="https://corda.github.io">
-    <!-- STYLES -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta property="og:title" content="Open Source Releases from R3 Developers">
+    <meta property="og:description" content="Explore our GitHub open source releases to kick start your CorDapp development">
+    <meta property="og:url" content="https://r3.github.io">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/default.css">
-    <!-- STYLES ENDS -->
-    <!-- CUSTOM FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <!-- CUSTOM FONTS ENDS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="d-flex flex-column h-100 text-center">
+<body class="d-flex flex-column h-100">
 
-    <main class="flex-shrink-0">
-
-        <!-- HEADER STARTS -->
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <img src="assets/img/logo-corda.svg" alt="Corda" />
+    <!-- HERO STARTS -->
+    <div id="hero">
+        <section>
+            <header class="py-3">
+                <div class="container-xxl">
+                    <nav class="navbar navbar-expand-md p-0">
+                        <button class="navbar-toggler ms-auto mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="assets/img/menu-to-close.svg" width="24" height="24" alt="menu" />
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ms-auto pb-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Developer Portal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Docs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Community</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="row subheader pt-3">
+                        <div class="col">
+                            <a href="https://developer.r3.com" target="_blank" title="R3 Developers"><img src="assets/img/r3-developers.png" alt="R3 Developers" width="183" height="40" /></a>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="Search Repos" aria-describedby="search" placeholder="Search Repos" id="search">
+                                <span class="input-group-text"><img src="assets/img/icon-search.png" alt="search" width="20" height="20" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header-content py-5">
+                <div class="container-xl">
+                    <h1 class="fs-2 fw-normal ps-5">Explore our GitHub open source releases to<br class="d-none d-sm-block" /> kick start your CorDapp development</h1>
                 </div>
             </div>
-        </header>
-        <!-- HEADER ENDS -->
+        </section>
+    </div>
+    <!-- HERO ENDS -->
 
-        <!-- CONTENT AREA STARTS -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 content">
-                    <h1>Coming Soon</h1>
-                    <p>We are currently working on creating our custom GitHub page.<br />Visit our main site for more resources.</p>
-                    <a href="https://corda.net/" target="_blank" title="Contact Us" class="btn btn-primary">Contact Us</a>
+    <!-- CONTENT AREA STARTS -->
+    <main class="flex-shrink-0">
+        <div class="container pt-5 pb-6">
+            <div class="row justify-content-between gx-0 top-cnt">
+                <div class="col">
+                    <nav class="navbar navbar-expand-md p-0">
+                        <button class="btn btn-dark rounded-pill navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#repoNavDropdown" aria-controls="repoNavDropdown" aria-expanded="false" aria-label="Toggle repo navigation">
+                            Repos &nbsp; <img src="assets/img/icon-down-arrow.svg" height="12" width="12" />
+                        </button>
+                        <div class="collapse navbar-collapse" id="repoNavDropdown">
+                            <ul class="navbar-nav repo-menu">
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col text-end">
+                    <a href="https://github.com/corda/corda" target="_blank" rel="noopener nofollow" class="btn btn-outline-dark rounded-pill btn-external">Corda Source Code</a>
+                </div>
+            </div>
+            <div class="git-cnt mt-5">
+                <div id="wrapper">
+	                <div class="loader"></div>
                 </div>
             </div>
         </div>
-        <!-- CONTENT AREA ENDS -->
-
     </main>
+    <!-- CONTENT AREA ENDS -->
 
-    <!-- FOOTER STARTS -->
-    <footer class="mt-auto">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <a href="http://slack.corda.net/" target="_blank" rel="noopener nofollow" title="Corda at Slack" class="icon-social"><img src="assets/img/icon-slack.svg" alt="Corda at Slack" /></a>
-                    <a href="https://twitter.com/cordablockchain" target="_blank" rel="noopener nofollow" title="Corda at Twitter" class="icon-social"><img src="assets/img/icon-twitter.svg" alt="Corda at Twitter" /></a>
-                    <a href="https://medium.com/cordah" target="_blank" rel="noopener nofollow" title="Corda Medium" class="icon-social"><img src="assets/img/icon-medium.svg" alt="Corda at Medium" /></a>
-                    <a href="https://www.youtube.com/channel/UCoOuUZatvIC1U65OisCrIKg/featured" target="_blank" rel="noopener nofollow" title="Corda at YouTube" class="icon-social"><img src="assets/img/icon-youtube.svg" alt="Corda at YouTube" /></a>
+    <!-- FOOTER -->
+    <footer class="footer mt-auto">
+        <div class="footer-cnt py-5">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://developer.r3.com" target="_blank" title="R3 Developers"><img src="assets/img/r3-developers.png" alt="R3 Developers" width="183" height="40" /></a>
+                        <ul class="list-inline mt-4">
+                            <li class="list-inline-item"><a href="http://slack.corda.net/" target="_blank" rel="noopener noopener" class="social-icon social-slack" title="R3 Developers Slack"></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/cordablockchain" target="_blank" rel="noopener noopener" class="social-icon social-twitter" title="R3 Developers Twitter"></a></li>
+                            <li class="list-inline-item"><a href="https://medium.com/corda" target="_blank" rel="noopener noopener" class="social-icon social-medium" title="R3 Developers Medium"></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCoOuUZatvIC1U65OisCrIKg/featured" target="_blank" rel="noopener noopener" class="social-icon social-youtube" title="R3 Developers YouTube"></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/corda" target="_blank" rel="noopener noopener" class="social-icon social-github" title="R3 Developers GitHub"></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/r3cev-llc/" target="_blank" rel="noopener noopener" class="social-icon social-linkedin" title="R3 Developers LinkedIn"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-links mb-0">
+                            <li><a href="https://www.developer.r3.com/" target="_blank">Developer Portal</a></li>
+                            <li><a href="https://www.developer.r3.com/developer-program" target="_blank">Developer Program</a></li>
+                            <li><a href="https://docs.corda.net/" target="_blank" rel="noopener noopener">Docs</a></li>
+                            <li><a href="https://www.developer.r3.com/case-studies" target="_blank">Case Studies</a></li>
+                            <li><a href="https://www.developer.r3.com/community" target="_blank">Community</a></li>
+                            <li><a href="https://www.developer.r3.com/events" target="_blank">Events</a></li>
+                            <li><a href="https://www.developer.r3.com/blog" target="_blank">Blog</a></li>
+                            <li><a href="https://www.developer.r3.com/videos" target="_blank">Videos</a></li>
+                            <li><a href="https://www.developer.r3.com/resources" target="_blank">Resources</a></li>
+                            <li><a href="https://www.developer.r3.com/support" target="_blank">Support</a></li>
+                            <li><a href="https://www.r3.com/careers/" target="_blank" rel="noopener noopener">Careers</a></li>
+                            <li><a href="https://www.r3.com/" target="_blank" rel="noopener noopener">About R3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-md-6 pt-3 text-center text-md-start">
+                        &copy; <script>document.write(new Date().getFullYear());</script> R3. All rights reserved.
+                    </div>
+                    <div class="col-md-6 py-3 text-end terms">
+                        <a href="https://www.r3.com/terms-of-use/" target="_blank" rel="noopener nofollow">Terms of Use</a> &nbsp; <span>&bull;</span> &nbsp; <a href="https://www.corda.net/privacy-policy/" target="_blank" rel="noopener nofollow">Privacy Policy</a> &nbsp; <span>&bull;</span> &nbsp; <a href="https://www.corda.net/trademark-policy/" target="_blank" rel="noopener nofollow">Trademark Policy</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- FOOTER STARTS -->
+    <!-- FOOTER ENDS -->
 
     <!-- SCRIPTS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-    <script src="assets/js/orgs.js"></script>
-    <script src="assets/js/repos.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="assets/js/repos.js"></script>
     <!-- ADD GOOGLE ANALYTICS HERE -->
 
 </body>

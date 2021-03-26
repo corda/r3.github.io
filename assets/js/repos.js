@@ -1,258 +1,428 @@
-// (function ($) {
-//     'use strict';
+'use strict';
+(function() {
+	/*
+		{
+			'category': 'samples',
+			'name': 'Features Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Features',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java',
+			'watchers': 30,
+			'forks': 70,
+			'language': 'Java',
+			'description': 'This repository contains multiple sample apps, from CorDapps that help you get started, all the way to demonstrating specific features and advanced usage.'
+		}
+	*/
 
-//     var updated = [];
-//     var allRepos = [];
-//     var allLangs = [];
-//     var repoUrls = {};
-//     var $langList = $(document.getElementById('lang-list'));
+	let Repositories = [
+		{
+			'category': 'samples',
+			'name': 'Features Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Features',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java'
+		},
+		{
+			'category': 'samples',
+			'name': 'Basic Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Basic',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java'
+		},
+		{
+			'category': 'samples',
+			'name': 'Advance Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Advanced',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java',
+			
+		},
+		{
+			'category': 'samples',
+			'name': 'TokenSamples  Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Tokens',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java'
+		},
+		{
+			'category': 'samples',
+			'name': 'AccountSamples Java',
+			'url': 'https://github.com/corda/samples-java/tree/master/Accounts',
+			'parent_url': 'https://github.com/corda/samples-java',
+			'language': 'Java'
+		},
+		{
+			'category': 'samples',
+			'name': 'Features Kotlin',
+			'url': 'https://github.com/corda/samples-kotlin/tree/master/Features',
+			'parent_url': 'https://github.com/corda/samples-kotlin',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'samples',
+			'name': 'Basic Kotlin',
+			'url': 'https://github.com/corda/samples-kotlin/tree/master/Basic',
+			'parent_url': 'https://github.com/corda/samples-kotlin',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'samples',
+			'name': 'Advance Kotlin',
+			'url': 'https://github.com/corda/samples-kotlin/tree/master/Advanced',
+			'parent_url': 'https://github.com/corda/samples-kotlin',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'samples',
+			'name': 'TokenSamples Kotlin',
+			'url': 'https://github.com/corda/samples-kotlin/tree/master/Tokens',
+			'parent_url': 'https://github.com/corda/samples-kotlin',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'samples',
+			'name': 'AccountSamples Kotlin',
+			'url': 'https://github.com/corda/samples-kotlin/tree/master/Accounts',
+			'parent_url': 'https://github.com/corda/samples-kotlin',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'samples',
+			'name': 'Community Contribute CorDapps',
+			'url': 'https://github.com/corda/community-cordapps',
+			'parent_url': '',
+			'language': 'Java',
+            'watchers': 0,
+            'forks': 2,
+            'description': 'These projects are built and maintained by the Corda Developer Community. All of the projects are developed using Corda Open Source. We hope these CorDapps can help you find inspiration for what you can build on Corda!'
+		},
+		{
+			'category': 'templates',
+			'name': 'Cordapp-template-java',
+			'url': 'https://github.com/corda/cordapp-template-java',
+			'parent_url': '',
+			'language': 'Java'
+		},
+		{
+			'category': 'templates',
+			'name': 'Cordapp-template-kotlin',
+			'url': 'https://github.com/corda/cordapp-template-kotlin',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'sdks',
+			'name': 'TokenSDK',
+			'url': 'https://github.com/corda/token-sdk',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'sdks',
+			'name': 'AccountSDK',
+			'url': 'https://github.com/corda/accounts',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'sdks',
+			'name': 'Business Membership',
+			'url': 'https://github.com/corda/bn-extension',
+			'parent_url': '',
+			'language': 'Kotlin',
+            'watchers': 4,
+            'forks': 2,
+            'description': 'The Corda platform extension for creating and managing business networks allows a node operator to define and create a logical network based on a set of common CorDapps as well as a shared business context.'
+		},
+		{
+			'category': 'tools',
+			'name': 'Node Explorer',
+			'url': 'https://github.com/corda/node-explorer',
+			'parent_url': '',
+			'language': 'JavaScript'
+		},
+		{
+			'category': 'tools',
+			'name': 'Corda Design Language',
+			'url': 'https://github.com/corda/cdl-example',
+			'parent_url': '',
+			'language': 'Kotlin',
+            'watchers': 7,
+            'forks': 3,
+            'description': 'This CorDapp provides an example implementation of a CDL design for two Parties to come to an agreement over the purchase of some goods.'
+		},
+		{
+			'category': 'tools',
+			'name': 'Corda settler',
+			'url': 'https://github.com/corda/corda-settler',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'cordaCore',
+			'name': 'Corda/corda',
+			'url': 'https://github.com/corda/corda',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'cordaCore',
+			'name': 'Corda/djvm',
+			'url': 'https://github.com/corda/djvm',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'conclave',
+			'name': 'CordaCon Conclave Tutorial',
+			'url': 'https://github.com/R3Conclave/cordacon-conclave-tutorial',
+			'parent_url': '',
+			'language': 'Kotlin',
+            'watchers': 3,
+            'forks': 1,
+            'description': 'This is the code that was presented in the tutorial, which is available to watch on YouTube.'
+		},
+	];
 
-//     function repoUrl(repo) {
-//         return repoUrls[repo.name] || repo.html_url;
-//     }
+	let categories = [
+        'conclave',
+        'cordaCore',
+		'samples',
+        'sdks',
+		'templates',
+		'tools',
+	];
 
-//     function renderRepo($index) {
-//         var repo = allRepos[$index];
-//         var $item = $('<div>').addClass('card').addClass(repo.language === null ? '' : repo.language);
-//         var $link = $('<a target="_blank">').attr('href', repoUrl(repo));
+	function addRepoDiv(repoName, repoTitle) {
+		$(`<div id="${repoName}-div" class="repo-div">`).appendTo('#allrepos-div');
+		$(`<h2 id="${repoName}-title" class="repo-title mb-3 mt-6">`).appendTo(`#${repoName}-div`);
+		$(`#${repoName}-title`).text(repoTitle);
+		$(`<div id="${repoName}-repos" class="row row-cols-1 row-cols-md-4 g-4">`).appendTo(`#${repoName}-div`);
+	}
 
-//         $item.append($('<h4>').html(repo.name));
-//         $item.append($('<small>').addClass('watchers').text(repo.watchers === null ? '' : repo.watchers));
-//         $item.append($('<small>').addClass('forks').text(repo.forks === null ? '' : repo.forks));
-//         $item.append($('<small>').addClass('language').text(repo.language === null ? '' : repo.language));
-//         $item.append($('<p>').text(repo.description === null ? '' : repo.description));
+	function addRepoMenuItem(repoName, repoTitle) {
+		var $item = $('<li class="nav-item repo-item">');
+		$item.append($(`<a id="${repoName}" class="nav-link" href="#${repoName}">`).html(repoTitle));
+		$item.appendTo('.repo-menu');
+	}
 
-//         $link.append($('<p>').addClass('link').text('GitHub »'));
-//         $link.appendTo($item);
+	function setRepo(repoName, repoTitle) {
+		addRepoMenuItem(repoName, repoTitle);
+		addRepoDiv(repoName, repoTitle);
+	}
 
-//         $item.appendTo('#allrepos');
-//     }
+	function topFunction() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
 
-//     function renderSidebar() {
-//         $('.filter-lang')
-//             .removeClass('active')
-//             .off('click');
+	function setSelectedMenuItem(repo) {
+		$('#search').val('');
+		$('#search').keyup();
+		$('.repo-item > a').removeClass('active');
+		if (repo !== '#allrepos') {
+			$('.repo-div').removeClass('repo-div-show');
+			$('.repo-div').addClass('repo-div-hide');
+			$(repo + '-div').addClass('repo-div-show');
+			$(repo + '-div').removeClass('repo-div-hide');
+		} else {
+			$('.repo-div').removeClass('repo-div-hide');
+			$('.repo-div').addClass('repo-div-show');
+		}
+		$(repo).addClass('active');
+	}
 
-//         $langList.html('');
-//         var liList = [];
+	function renderRepo(repo) {
+		var category = repo.category;
+		if (categories.includes(category)) {
+			var $item = $('<div>').addClass('card h-100"').addClass(repo.language === null ? '' : repo.language);
 
-//         allLangs = allLangs.sort();
+			var $title = $('<div>');
+			$('<h4>').html(repo.name).appendTo($title);
+			$title.appendTo($item);
 
-//         liList.push([
-//             '<li>',
-//             '<a href="#showall" onclick="location.reload()">All</a>',
-//             '</li>'
-//         ].join(''));
+			var $repo_properties = $('<div>').addClass('meta');
 
-//         for (var i = 0, len = allLangs.length; i < len; i++) {
-//             liList.push([
-//                 '<li>',
-//                 '<a class="filter-lang" data-lang="' + allLangs[i] + '" href="#">' + allLangs[i] + '</a>',
-//                 '</li>'
-//             ].join(''));
-//         }
+			var $watchers = $('<div>');
+			$watchers.addClass('watchers').text(repo.watchers === null ? '' : repo.watchers).appendTo($watchers);
+			$watchers.appendTo($repo_properties);
 
-//         $langList.html(liList.join(''));
-//         $('.filter-lang').on('click', function (event) {
-//             event.preventDefault();
-//             $('.filter-lang').removeClass('active');
+			var $forks = $('<div>');
+			$forks.addClass('forks').text(repo.forks === null ? '' : repo.forks).appendTo($forks);
+			$forks.appendTo($repo_properties);
 
-//             filterByLang($(this).attr('data-lang'));
+			var $language = $('<div>');
+			$language.addClass('language').text(repo.language === null ? '' : repo.language).appendTo($language);
+			$language.appendTo($repo_properties);
 
-//             $(this).addClass('active');
-//         });
-//     }
+			$repo_properties.appendTo($item);
 
-//     function filterByLang(lang) {
-//         $('#allrepos').html('');
+			var $description = $('<div>');
+			$('<p>').addClass('').text(repo.description === null ? '' : repo.description).appendTo($description);
+			$description.appendTo($item);
 
-//         var indexRepoLangList = allRepos
-//             .filter(function (repo) {
-//                 return repo.language === lang;
-//             })
-//             .map(function (repo) {
-//                 return allRepos.indexOf(repo);
-//             });
+			var $link = $('<div>');
+			var $anchor = $('<a target="_blank">').attr('href', repo.url);
+			$('<p>').addClass('link').text('Clone Repo').appendTo($anchor);
+			$anchor.appendTo($link);
+			$link.appendTo($item);
 
-//         for (var r = 0, len = indexRepoLangList.length; r < len; r++) {
-//             renderRepo(indexRepoLangList[r]);
-//         }
-//     }
+			$('<div>').append($item).appendTo('#' + category + '-repos');
+		}
+	}
 
-//     function addAllRepos() {
-//         $('#allrepos').addClass('card-columns');
+	function addNoResultsFoundDiv() {
+		var $description = $('<div class="repos-not-found">');
+		$('<p>').addClass('').text('No results found').appendTo($description);
+		$description.appendTo('#allrepos-div');
+		$('.repos-not-found').hide();
+	}
 
-//         for (var r = 0, len = allRepos.length; r < len; r++) {
-//             renderRepo(r);
-//         }
-//     }
+	function setRepos() {
+		$('<div id="allrepos-div">').appendTo('#wrapper');
+		addNoResultsFoundDiv();
 
-//     function pushRepo(repos) {
-//         var left = repos;
-//         var right = allRepos;
-//         var result = [];
-//         var il = 0;
-//         var ir = 0;
+		addRepoMenuItem('allrepos', 'All Repos');
 
-//         while (il < left.length && ir < right.length) {
-//             if (left[il].name.toLowerCase() < right[ir].name.toLowerCase()) {
-//                 result.push(left[il++]);
-//             } else {
-//                 result.push(right[ir++]);
-//             }
-//         }
+        setRepo('conclave', 'Conclave');
+        setRepo('cordaCore', 'Corda Core');
+		setRepo('samples', 'Samples');
+        setRepo('sdks', 'SDKs');
+		setRepo('templates', 'Templates');
+		setRepo('tools', 'Tools');
+		
+	}
 
-//         allRepos = result.concat(left.slice(il)).concat(right.slice(ir));
-//     }
+	function show_cards(cards) {
+		cards.each(function() {
+			$(this).parent().removeClass('repo-card-hide');
+			$(this).parent().addClass('repo-card-show');
+			let repo = '#' + $(this).parent().parent().attr('id');
+			let cantidad = $(repo).children('.repo-card-show').length;
+			if (cantidad > 0) {
+				$(repo).parent().removeClass('repo-div-hide');
+				$(repo).parent().addClass('repo-div-show');
+			}
+			let categorias = $('#allrepos-div').children('.repo-div-show').length;
+			if (categorias > 0) {
+				$('.repos-not-found').hide();
+			}
+		});
+	}
 
-//     function mergeUpdated(repos) {
-//         var left = repos;
-//         var right = updated;
-//         var result = [];
-//         var il = 0;
-//         var ir = 0;
+	function hide_cards(cards) {
+		cards.each(function() {
+			$(this).parent().removeClass('repo-card-show');
+			$(this).parent().addClass('repo-card-hide');
+			let repo = '#' + $(this).parent().parent().attr('id');
+			let cantidad = $(repo).children('.repo-card-show').length;
+			if (cantidad < 1) {
+				$(repo).parent().removeClass('repo-div-show');
+				$(repo).parent().addClass('repo-div-hide');
+			}
+			let categorias = $('#allrepos-div').children('.repo-div-show').length;
+			if (categorias < 1) {
+				$('.repos-not-found').show();
+			}
+		});
+	}
 
-//         while (il < left.length && ir < right.length) {
-//             if (left[il].pushed_at > right[ir].pushed_at) {
-//                 result.push(left[il++]);
-//             } else {
-//                 result.push(right[ir++]);
-//             }
-//         }
+	function searchEvent() {
+		/*
+		 * Search for $repo.name & render result
+		 */
+		$('#search').keyup(function() {
+			location.hash = '';
+			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+			var shown_cards = $('.card');
+			show_cards(shown_cards);
 
-//         updated = result.concat(left.slice(il)).concat(right.slice(ir));
-//     }
+			var hidden_cards = shown_cards.filter(function() {
+				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+				return text.indexOf(val) === - 1;
+			});
+			hide_cards(hidden_cards);
+		});
+	}
 
-//     function addRepos(orgs, repos) {
-//         var forks = [];
-//         var org = orgs.name;
-//         var reposcmd = orgs.type === 'repo' ? '' : '/repos';
+	function bodyAnalytics() {
+		$('body').on('click', 'a[data-analytics-category][data-analytics-action]', function(e) {
+			if (!window.ga) {
+				return;
+			}
 
-//         repos = repos || [];
+			if (this.hostname && this.hostname !== location.hostname) {
+				e.preventDefault();
+				var url = this.href;
 
-//         // There are three supported request types: org, user and repo. Syntax differs.
-//         if (orgs.type !== 'org' && orgs.type !== 'user' && orgs.type !== 'repo') {
-//             console.log('** Unknown type “' + orgs.type + '” for org “' + org +
-//                 '” — check “orgs.js” for typo.');
-//             return;
-//         }
+				setTimeout(function() {
+					document.location = url;
+				}, 200);
+			}
 
-//         var uri = 'https://api.github.com/' + orgs.type + 's/' + org + reposcmd +
-//             '?per_page=1000&client_id=&client_secret=';
+			var $el = $(this);
+			var data = {
+				hitType: 'event',
+			};
 
-//         $.getJSON(uri, function (result) {
-//             if (!Array.isArray(result)) {
-//                 result = [].concat(result);
-//             }
+			data.eventCategory = $el.attr('data-analytics-category');
+			data.eventAction = $el.attr('data-analytics-action');
 
-//             if (result && result.length > 0) {
-//                 repos = repos.concat(result);
+			if ($el.attr('data-analytics-label')) {
+				data.eventLabel = $el.attr('data-analytics-label');
+			}
 
-//                 $.each(repos, function (i, repo) {
-//                     repo.pushed_at = new Date(repo.pushed_at);
+			if ($el.attr('data-analytics-value')) {
+				data.eventValue = parseInt($el.attr('data-analytics-value'), 10);
+			}
 
-//                     if (repo.fork === true) {
-//                         forks.push(i);
-//                     }
+			window.ga('send', data);
+		});
+	}
 
-//                     if (repo.language && allLangs.indexOf(repo.language) === -1) {
-//                         allLangs.push(repo.language);
-//                     }
-//                 });
+	function menuItemEvent() {
+		$('.repo-item > a').on('click', function(e) {
+			const repo = '#' + this.id;
+			setSelectedMenuItem(repo);
+		});
+	}
 
-//                 $.each(forks, function (i, forkindex) {
-//                     var indextoremove = forkindex - i;
+	function init() {
+		setRepos();
+		Repositories.forEach(repo => renderRepo(repo));
+		searchEvent();
+		bodyAnalytics();
+		menuItemEvent();
+		var hash = new URL(document.URL).hash || '#allrepos';
+		setSelectedMenuItem(hash);
+	}
 
-//                     repos.splice(indextoremove, 1);
-//                 });
+	function validRepositories(data) {
+		data.map(function(e) {
+			Repositories.map(function(repo) {
+				if ((repo.parent_url) && (repo.parent_url === e.html_url)) {
+					repo.watchers = e.watchers;
+					repo.forks = e.forks;
+					repo.language = e.language;
+					repo.description = e.description;
+				} else if (repo.url === e.html_url) {
+					repo.watchers = e.watchers;
+					repo.forks = e.forks;
+					repo.language = e.language;
+					repo.description = e.description;
+				}
+			});
+		});
+	}
 
-//                 repos.sort(function (a, b) {
-//                     if (a.pushed_at < b.pushed_at) {
-//                         return 1;
-//                     }
-
-//                     if (b.pushed_at < a.pushed_at) {
-//                         return -1;
-//                     }
-
-//                     return 0;
-//                 });
-
-//                 mergeUpdated(repos);
-
-//                 repos.sort(function (a, b) {
-//                     if (a.name.toLowerCase() > b.name.toLowerCase()) {
-//                         return 1;
-//                     }
-
-//                     if (b.name.toLowerCase() > a.name.toLowerCase()) {
-//                         return -1;
-//                     }
-
-//                     return 0;
-//                 });
-
-//                 pushRepo(repos);
-
-//                 addAllRepos();
-
-//                 renderSidebar();
-//             }
-//         });
-//     }
-
-//     $('<div>').appendTo('#wrapper').append($('<div id="allrepos">'));
-
-//     for (var r in window.orgs) {
-//         if (Object.prototype.hasOwnProperty.call(window.orgs, r)) {
-//             addRepos(window.orgs[r]);
-//         }
-//     }
-
-//     /*
-//      * Search for $repo.name & render result
-//      */
-//     $('#search').keyup(function () {
-//         var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-//         var $rows = $('.card');
-
-//         $rows.show().filter(function () {
-//             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-
-//             return text.indexOf(val) === -1;
-//         }).hide();
-//     });
-
-//     $('body').on('click', 'a[data-analytics-category][data-analytics-action]', function (e) {
-//         if (!window.ga) {
-//             return;
-//         }
-
-//         if (this.hostname && this.hostname !== location.hostname) {
-//             e.preventDefault();
-//             var url = this.href;
-
-//             setTimeout(function () {
-//                 document.location = url;
-//             }, 200);
-//         }
-
-//         var $el = $(this);
-//         var data = {
-//             hitType: 'event'
-//         };
-
-//         data.eventCategory = $el.attr('data-analytics-category');
-//         data.eventAction = $el.attr('data-analytics-action');
-
-//         if ($el.attr('data-analytics-label')) {
-//             data.eventLabel = $el.attr('data-analytics-label');
-//         }
-
-//         if ($el.attr('data-analytics-value')) {
-//             data.eventValue = parseInt($el.attr('data-analytics-value'), 10);
-//         }
-
-//         window.ga('send', data);
-//     });
-// })(jQuery);
+	$.ajax({
+		 url: 'https://api.github.com/orgs/corda/repos',
+		 method: 'GET',
+		 data: {per_page: 1000},
+	 })
+	 .done(function(data) {
+		 validRepositories(data);
+		 $('#wrapper .loader').remove();
+		 init();
+	 });
+}());

@@ -1,47 +1,123 @@
 /*
-Product: Corda Developers
-Author: Corda Developers
-Author URL: https://corda.net/
+Product: R3 Developers - GitHub
+Author: R3 Developer Relations Team
+Author URL: https://developer.r3.com
 */
 
 /*------------------------------------------------*/
 /* GLOBAL YR
 /*------------------------------------------------*/
-html, body { background: #FFF url("../img/background.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; font: 500 18px/26px "Poppins", Arial, sans-serif; color: #53585F; }
-h1 { font-size: 4rem; }
-h1:after { content: ""; display: block; background-color: #EC1D24; width: 240px; height: 8px; border-radius: 4px; margin: 24px auto 0 auto; }
-p { margin-top: 2em; }
+html, body {background-color: #FCFCFC;font-family: 'Poppins', Arial, sans-serif;color: #1D2343; width: 100%; height: 100%; }
+h1 { color: #FCFCFC; }
+h2 { font-weight: 700; }
+h2, h3, h4, h5, h6 { color: #010101; }
+a { text-decoration: none; }
+li { font-size: 1rem; }
+.mt-6 { margin-top: 4rem; }
+.pb-6 { padding-bottom: 6rem; }
 
 /*------------------------------------------------*/
 /* HEADER
 /*------------------------------------------------*/
-header { padding-top: 48px; }
+header { background-color: rgba(0,0,0,.4); }
+#hero { background: url("../img/bg-dark.jpg") no-repeat center bottom; background-attachment: fixed; background-size: cover; }
+.header-content h1 { border-left: solid 4px #EC1D24; }
+.subheader { border-top: solid 1px #535870; }
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 0 .72rem;
+    }
+}
+.nav-link, .footer-links a { color: #FCFCFC; font-size: .85rem; font-weight: 600;}
+.nav-link:hover, .footer-links a:hover { color: #EC1D24; }
+.navbar-toggler { background-color: #292929; border-color: #53585F; color: #EFEFF3; }
+
+/*------------------------------------------------*/
+/* TABS
+/*------------------------------------------------*/
+.repo-item.nav-item > a { color: #1d2343; font-size: 1rem; border-bottom: 2px solid #d9dbe9; padding-bottom: 1rem !important; }
+.repo-item.nav-item a:hover, .repo-item.nav-item .active { border-color: #EC1D24; color: #EC1D24; }
+main .navbar-toggler { font-size: unset; line-height: initial; }
 
 /*------------------------------------------------*/
 /* CONTENT
 /*------------------------------------------------*/
-.content { margin-top: 168px; }
+.card { padding: 24px; border-color: transparent; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+.card h4 { font-size: 1em; width: 100%; font-weight: 600; }
+.card a:hover { color: #EC1D24; }
+.card p { margin-top: .75rem; }
+.card small { color: #53585f; font-weight: 600; }
+.card .watchers:before { content: ""; background-image: url(../img/icon-star.svg); display: inline-block; width: 12px; height: 12px; background-size: 12px 12px; margin-right: 4px; }
+.card .forks:before { content: ""; background-image: url(../img/icon-branch.svg); display: inline-block; width: 12px; height: 12px; background-size: 12px 12px; margin-right: 4px; }
+.card .link { color: #EC1D24; font-weight: 700; }
+.card .link:after { content: ""; background-image: url("../img/icon-external.svg"); display: inline-block; width: 14px; height: 14px; margin-left: .45rem; position: relative; top: 1px; filter: invert(27%) sepia(95%) saturate(4188%) hue-rotate(343deg) brightness(88%) contrast(111%); }
+.meta { display: flex; flex-direction: row; font-weight: 600; color: #53585f; }
+.forks { padding-left: 10px; }
+.language { margin-left: auto; }
+.repo-card-show, .repo-div-show { display: block; }
+.repo-card-hide, .repo-div-hide { display: none; }
+
+/* ------------------------- */
+/* LOADER */
+/* ------------------------- */
+.loader{ display: block; position: relative; left: 50%; top: 50%; width: 100px; height: 100px; margin: -50px 0 0 -50px; border-radius: 50%; border: 3px solid transparent; border-top-color: #010101; -webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite; }
+.loader:before{ content: ""; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 3px solid transparent; border-top-color: #EC1D24; -webkit-animation: spin 3s linear infinite; animation: spin 3s linear infinite; }
+.loader:after{ content: ""; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border-radius: 50%; border: 3px solid transparent; border-top-color: #53585f; -webkit-animation: spin 1.5s linear infinite; animation: spin 1.5s linear infinite; }
 
 /*------------------------------------------------*/
 /* BUTTONS
 /*------------------------------------------------*/
-.btn { font-weight: 600; border-radius: 40px; padding: .8rem 2rem; }
-.btn-primary { background-color: #1D2343; border-color: #1D2343; }
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover { background-color: #FFF; border-color: #1D2343; color: #1D2343; }
+.btn { font-weight: 600; border-width: 2px; padding: .375rem 1rem; }
+.btn-external:after { content: ""; background-image: url("../img/icon-external.svg"); display: inline-block; width: 14px; height: 14px; margin-left: .45rem; position: relative; top: 1px; }
+.btn-external:hover:after { filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(241deg) brightness(122%) contrast(98%); }
+
+/*------------------------------------------------*/
+/* FORMS
+/*------------------------------------------------*/
+.form-control { background-color: #292929; border-color: #53585F; border-radius: 4rem; color: #EFEFF3; padding-left: 1.5rem; height: 40px; }
+.input-group-text { background-color: #53585F; border-color: #53585F; border-radius: 0 4rem 4rem 0; padding: .375rem 1rem }
+.form-control:focus { background-color: #464646; border-color: #53585F; color: #EFEFF3; box-shadow: none; }
 
 /*------------------------------------------------*/
 /* FOOTER
 /*------------------------------------------------*/
-footer { padding-bottom: 48px; }
-footer a { margin-right: 32px; }
-footer a:last-child {margin-right: 0;}
+.footer-cnt { background-color: #262626; }
+.footer-cnt .list-inline-item:not(:last-child) { margin-right: 1rem; }
+.footer-links { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; padding-left: 0; }
+.footer-links li { margin-bottom: .25rem; }
+.social-icon { content: ""; display: block; background-position: center left; background-repeat: no-repeat; }
+.social-icon:hover { filter: invert(27%) sepia(95%) saturate(4188%) hue-rotate(343deg) brightness(88%) contrast(111%); }
+.social-slack { background-image: url("../img/icon-slack.svg"); background-size: 24px 24px; width: 24px; height: 25px; }
+.social-twitter { background-image: url("../img/icon-twitter.svg"); background-size: 24px 19px; width: 24px; height: 19px; }
+.social-medium { background-image: url("../img/icon-medium.svg"); background-size: 40px 23px; width: 40px; height: 23px; }
+.social-youtube { background-image: url("../img/icon-youtube.svg"); background-size: 26px 18px; width: 26px; height: 18px; }
+.social-github { background-image: url("../img/icon-github.svg"); background-size: 25px 24px; width: 24px; height: 24px; }
+.social-linkedin { background-image: url("../img/icon-linkedin.svg"); background-size: 25px 24px; width: 25px; height: 24px; }
+.copyright { background-color: #010101; font-size: .75rem; color: #FCFCFC; }
+.copyright span { color: #EC1D24; font-weight: 700; }
+.copyright a { color: #FCFCFC; }
+.copyright a:hover { color: #EC1D24; }
 
 /*------------------------------------------------*/
 /* MEDIA QUERIES
 /*------------------------------------------------*/
-@media (max-width: 980px)  {
-    h1, .h1 { font-size: 3rem; }
-    .content { margin-top: 104px; }
+@media (max-width: 992px)  {
+    .subheader .input-group { margin-top: .75rem; }
+    .terms { text-align: center !important; }
+    .footer-links { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; margin-top: 1rem; }
+}
+@media (max-width: 767px)  {
+    .repo-item.nav-item { padding: .75rem 0; }
+}
+
+/* ------------------------- */
+/* ANIMATIONS */
+/* ------------------------- */
+@-webkit-keyframes spin {
+    0%{ transform: rotate(0); }
+    100%{ transform: rotate(360deg); }
+}
+@keyframes spin {
+    0%{ transform: rotate(0); }
+    100%{ transform: rotate(360deg); }
 }

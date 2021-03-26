@@ -1,7 +1,7 @@
 {
-  "name": "corda.github.io",
-  "description": "corda.github.io",
-  "author": "Corda Developers",
+  "name": "r3devs.github.io",
+  "description": "r3devs.github.io",
+  "author": "R3 Developers",
   "version": "0.0.1",
   "devDependencies": {
     "jshint": "^2.9.5"
