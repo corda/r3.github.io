@@ -159,6 +159,13 @@
 			'language': 'Kotlin'
 		},
 		{
+			'category': 'tools',
+			'name': 'Corda CLI Plugin Host',
+			'url': 'https://github.com/corda/corda-cli-plugin-host',
+			'parent_url': '',
+			'language': 'Groovy'
+		},
+		{
 			'category': 'cordaCore',
 			'name': 'Corda/corda',
 			'url': 'https://github.com/corda/corda',
@@ -173,6 +180,20 @@
 			'language': 'Kotlin'
 		},
 		{
+			'category': 'cordaCore',
+			'name': 'Corda Runtime OS',
+			'url': 'https://github.com/corda/corda-runtime-os',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
+			'category': 'cordaCore',
+			'name': 'Corda API',
+			'url': 'https://github.com/corda/corda-api',
+			'parent_url': '',
+			'language': 'Kotlin'
+		},
+		{
 			'category': 'conclave',
 			'name': 'CordaCon Conclave Tutorial',
 			'url': 'https://github.com/R3Conclave/cordacon-conclave-tutorial',
@@ -182,20 +203,50 @@
             'forks': 1,
             'description': 'This is the code that was presented in the tutorial, which is available to watch on YouTube.'
 		},
+		{
+			'category': 'conclave',
+			'name': 'Conclave Tutorials',
+			'url': 'https://github.com/R3Conclave/conclave-tutorials',
+			'parent_url': '',
+			'language': 'Java',
+            'watchers': 4,
+            'forks': 0,
+            'description': 'This repository holds tutorial code for the Conclave SDK.'
+		},
+		{
+			'category': 'conclave',
+			'name': 'Conclave Samples',
+			'url': 'https://github.com/R3Conclave/conclave-samples',
+			'parent_url': '',
+			'language': 'Java',
+            'watchers': 8,
+            'forks': 8,
+            'description': 'This repository contains multiple Conclave sample applications which is intended to help developers to get started with Conclave and understand different features of the platform.'
+		},
+		{
+			'category': 'conclave',
+			'name': 'Conclave Core SDK',
+			'url': 'https://github.com/R3Conclave/conclave-core-sdk',
+			'parent_url': '',
+			'language': 'C+',
+            'watchers': 5,
+            'forks': 2,
+            'description': 'The Conclave Core SDK is an open source platform that lets you create SGX enclaves easily.'
+		},
 	];
 
 	let categories = [
-        'conclave',
         'cordaCore',
 		'samples',
         'sdks',
 		'templates',
 		'tools',
+        'conclave',
 	];
 
 	function addRepoDiv(repoName, repoTitle) {
 		$(`<div id="${repoName}-div" class="repo-div">`).appendTo('#allrepos-div');
-		$(`<h2 id="${repoName}-title" class="repo-title mb-3 mt-6">`).appendTo(`#${repoName}-div`);
+		$(`<h2 id="${repoName}-title" class="repo-title mb-3 mt-5">`).appendTo(`#${repoName}-div`);
 		$(`#${repoName}-title`).text(repoTitle);
 		$(`<div id="${repoName}-repos" class="row row-cols-1 row-cols-md-4 g-4">`).appendTo(`#${repoName}-div`);
 	}
@@ -284,12 +335,12 @@
 
 		addRepoMenuItem('allrepos', 'All Repos');
 
-        setRepo('conclave', 'Conclave');
         setRepo('cordaCore', 'Corda Core');
 		setRepo('samples', 'Samples');
         setRepo('sdks', 'SDKs');
 		setRepo('templates', 'Templates');
 		setRepo('tools', 'Tools');
+        setRepo('conclave', 'Conclave*');
 		
 	}
 

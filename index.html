@@ -40,22 +40,19 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav ms-auto pb-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Developer Portal</a>
+                                    <a class="nav-link" href="https://developer.r3.com/" target="_blank">Developer platform</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Docs</a>
+                                    <a class="nav-link" href="https://developer.r3.com/events" target="_blank">Events</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Community</a>
+                                    <a class="nav-link" href="https://developer.r3.com/blog" target="_blank">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Events</a>
+                                    <a class="nav-link" href="https://community.r3.com/" target="_blank">Forum</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" target="_blank">Support</a>
+                                    <a class="nav-link" href="https://docs.corda.net/" target="_blank">Docs</a>
                                 </li>
                             </ul>
                         </div>
@@ -74,7 +71,7 @@
                 </div>
             </header>
             <div class="header-content py-5">
-                <div class="container-xl">
+                <div class="container-xxl">
                     <h1 class="fs-2 fw-normal ps-5">Explore our GitHub open source releases to<br class="d-none d-sm-block" /> kick start your CorDapp development</h1>
                 </div>
             </div>
@@ -84,9 +81,9 @@
 
     <!-- CONTENT AREA STARTS -->
     <main class="flex-shrink-0">
-        <div class="container pt-5 pb-6">
+        <div class="container-xxl pt-5 pb-6">
             <div class="row justify-content-between gx-0 top-cnt">
-                <div class="col">
+                <div class="col-lg-9">
                     <nav class="navbar navbar-expand-md p-0">
                         <button class="btn btn-dark rounded-pill navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#repoNavDropdown" aria-controls="repoNavDropdown" aria-expanded="false" aria-label="Toggle repo navigation">
                             Repos &nbsp; <img src="assets/img/icon-down-arrow.svg" height="12" width="12" />
@@ -98,13 +95,13 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col text-end">
+                <div class="col-lg-3 text-end">
                     <a href="https://github.com/corda/corda" target="_blank" rel="noopener nofollow" class="btn btn-outline-dark rounded-pill btn-external">Corda Source Code</a>
                 </div>
             </div>
-            <div class="git-cnt mt-5">
+            <div class="git-cnt">
                 <div id="wrapper">
-	                <div class="loader"></div>
+                    <div class="loader"></div>
                 </div>
             </div>
         </div>
@@ -130,15 +127,17 @@
                     <div class="col-md-6">
                         <ul class="footer-links mb-0">
                             <li><a href="https://www.developer.r3.com/" target="_blank">Developer Portal</a></li>
+                            <li><a href="https://developer.r3.com/corda/" target="_blank">Corda</a></li>
+                            <li><a href="https://www.conclave.net/" target="_blank">Conclave</a></li>
                             <li><a href="https://www.developer.r3.com/developer-program" target="_blank">Developer Program</a></li>
-                            <li><a href="https://docs.corda.net/" target="_blank" rel="noopener noopener">Docs</a></li>
-                            <li><a href="https://www.developer.r3.com/case-studies" target="_blank">Case Studies</a></li>
-                            <li><a href="https://www.developer.r3.com/community" target="_blank">Community</a></li>
-                            <li><a href="https://www.developer.r3.com/events" target="_blank">Events</a></li>
-                            <li><a href="https://www.developer.r3.com/blog" target="_blank">Blog</a></li>
                             <li><a href="https://www.developer.r3.com/videos" target="_blank">Videos</a></li>
+                            <li><a href="https://www.developer.r3.com/library" target="_blank">Library</a></li>
                             <li><a href="https://www.developer.r3.com/resources" target="_blank">Resources</a></li>
-                            <li><a href="https://www.developer.r3.com/support" target="_blank">Support</a></li>
+                            <li><a href="https://www.developer.r3.com/support" target="_blank">Dev support</a></li>
+                            <li><a href="https://www.developer.r3.com/blog" target="_blank">Blog</a></li>
+                            <li><a href="https://www.developer.r3.com/events" target="_blank">Events</a></li>
+                            <li><a href="https://community.r3.com/" target="_blank">Forum</a></li>
+                            <li><a href="https://developer.r3.com/docs/" target="_blank">Docs</a></li>
                             <li><a href="https://www.r3.com/careers/" target="_blank" rel="noopener noopener">Careers</a></li>
                             <li><a href="https://www.r3.com/" target="_blank" rel="noopener noopener">About R3</a></li>
                         </ul>
@@ -166,7 +165,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="assets/js/repos.js"></script>
     <!-- ADD GOOGLE ANALYTICS HERE -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2GT63EZRY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-R2GT63EZRY');
+    </script>
 </body>
 
 </html>
