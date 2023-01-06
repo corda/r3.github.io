@@ -193,46 +193,6 @@
 			'parent_url': '',
 			'language': 'Kotlin'
 		},
-		{
-			'category': 'conclave',
-			'name': 'CordaCon Conclave Tutorial',
-			'url': 'https://github.com/R3Conclave/cordacon-conclave-tutorial',
-			'parent_url': '',
-			'language': 'Kotlin',
-            'watchers': 3,
-            'forks': 1,
-            'description': 'This is the code that was presented in the tutorial, which is available to watch on YouTube.'
-		},
-		{
-			'category': 'conclave',
-			'name': 'Conclave Tutorials',
-			'url': 'https://github.com/R3Conclave/conclave-tutorials',
-			'parent_url': '',
-			'language': 'Java',
-            'watchers': 4,
-            'forks': 0,
-            'description': 'This repository holds tutorial code for the Conclave SDK.'
-		},
-		{
-			'category': 'conclave',
-			'name': 'Conclave Samples',
-			'url': 'https://github.com/R3Conclave/conclave-samples',
-			'parent_url': '',
-			'language': 'Java',
-            'watchers': 8,
-            'forks': 8,
-            'description': 'This repository contains multiple Conclave sample applications which is intended to help developers to get started with Conclave and understand different features of the platform.'
-		},
-		{
-			'category': 'conclave',
-			'name': 'Conclave Core SDK',
-			'url': 'https://github.com/R3Conclave/conclave-core-sdk',
-			'parent_url': '',
-			'language': 'C+',
-            'watchers': 5,
-            'forks': 2,
-            'description': 'The Conclave Core SDK is an open source platform that lets you create SGX enclaves easily.'
-		},
 	];
 
 	let categories = [
@@ -241,7 +201,6 @@
         'sdks',
 		'templates',
 		'tools',
-        'conclave',
 	];
 
 	function addRepoDiv(repoName, repoTitle) {
@@ -340,7 +299,6 @@
         setRepo('sdks', 'SDKs');
 		setRepo('templates', 'Templates');
 		setRepo('tools', 'Tools');
-        setRepo('conclave', 'Conclave*');
 		
 	}
 
